@@ -1,0 +1,301 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cover{
+    width: 80vw;
+    height: 90vh;
+    /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.6); */
+}
+header{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+header h2{
+    font-weight: 900;
+    font-size: 1.5rem;
+    margin: 0 0.8rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.items .icon{
+    display: none;
+}
+.items ul{
+    display: flex;
+    flex-direction: row;
+}
+.items ul li{
+    list-style: none;
+    padding: 0.6rem 0.6rem;
+    line-height: 1.5;
+    transition: all 1s ease-in-out;
+}
+.items ul li a{
+    text-decoration: none;
+    color: rgb(66, 65, 65);
+    font-weight: 600;
+    text-align: center;
+}
+.items ul li:hover{
+    transform: scale(0.9,0.9);
+    color: rgb(207, 96, 22);
+}
+
+.Content{
+    width: 100%;
+    height: 67%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Content-area{
+    width: 65%;
+    height: 100%;
+    display: grid;
+    grid-template:  repeat(2, 50fr) / repeat(2, 50fr);
+    /* grid-template: 50% 70%/ repeat(3, 33.33%); */
+}
+
+.main-content{
+    grid-column: 1 / span 2;
+    background-image: url(images/image-web-3-desktop.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.note{
+    padding: 0.5rem;
+}
+
+.note h1{
+    font-size: 3.2rem;
+    font-weight: 600;
+    text-align: left;
+}
+
+.paragraph{
+    position: relative;
+    padding: 0.5rem;
+}
+.paragraph p{
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: justify;
+    color: rgb(129, 124, 124);
+}
+.paragraph button{
+    position: absolute;
+    bottom: 0;
+    line-height: 1.2;
+    font-size: 0.9rem;
+    padding: 0.6rem 1.8rem;
+    text-align: center;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+    background-color: rgb(1, 13, 36);
+}
+.paragraph button:hover{
+    transform: scale(0.9,0.9);
+    background-color: rgb(2, 22, 57);
+}
+
+.Extra-content{
+    width: 33.4%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(1, 13, 36);
+}
+.extra-content{
+    height: 30%;
+    width: 80%;
+}
+.extra-extra{
+    height: 40%;
+    width: 80%;
+}
+.extra-content h2{
+    margin: 0.5rem 0 0.8rem 0;
+    color: rgb(246, 125, 49);
+}
+.extra-content h3{
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+}
+.extra-content h3:hover{
+    color: rgb(246, 125, 49);
+}
+p{
+    color: rgb(129, 124, 124);
+    font-size: 0.8rem;
+}
+hr{
+    color: rgb(129, 124, 124);
+    margin-bottom: 1rem;
+}
+.Space{
+    height: 5%;
+    width: 100%;
+}
+.Aside{
+    height: 18%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.image-container{
+    float: left;
+    height: 100%;
+    width: 25%;
+}
+.image-container img{
+    height: 100%;
+    width: 100%;
+}
+.fig-container{
+    float: left;
+    height: 100%;
+    width: 75%;
+}
+.number{
+    float: left;
+    height: 30%;
+    padding: 0 0 0 0.5rem;
+    width: 100%;
+    color: rgb(129, 124, 124);
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+.data{
+    float: left;
+    height: 70%;
+    width: 100%;
+    padding: 0 0 0.5rem 0.5rem;
+}
+.data h3{
+    color: rgb(1, 13, 36);
+    margin: 0 0 0.5rem 0;
+    font-weight: 600;
+}
+.data h3:hover{
+    color: brown;
+}
+
+@media only screen and (max-width: 980px){
+    .cover{
+        min-height: 80%;
+        width: 80%;
+    }
+
+    header{
+        position: relative;
+        height: 5%;
+    }
+
+    #dropdown{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 60%;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.8);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.7s;
+        background: beige;
+        opacity: 2;
+        display: flex;
+        flex-direction: column;
+    }
+    #dropdown.open-menu{
+        max-height: 25rem;
+    }
+
+
+    .items .icon{
+        display: block;
+        margin-right: 0.8rem;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+
+    .Content{
+        height: 800px;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .Content-area{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 65%;
+        margin-bottom: 5%;
+    }
+
+    .main-content{
+        width: 100%;
+        height: 50%;
+    }
+    .note{
+        width: 100%;
+        height: 25%;
+    }
+    /* .note h1{
+        text-align: center;
+    } */
+    .paragraph{
+        width: 100%;
+        height: 25%;
+    }
+    .Extra-content{
+        width: 100%;
+        height: 40%;
+    }
+
+    .Aside{
+        flex-direction: column;
+        height: 350px;
+    }
+    figure{
+        height: 30%;
+        width: 100%;
+    }
+
+    .centered-figure{
+        margin: 5% 0;
+    }
+
+}
+
+@media only screen and (max-width: 560px){
+    .note h1{
+        font-size: 2.2rem;
+    }
+    .paragraph p{
+        font-size: 0.8rem;
+    }
+
+    .extra-content h3{
+        font-size: 0.8rem;
+    }
+
+}
